@@ -33,27 +33,18 @@ class Counter {
 }
 
 class Seasons {
-  /**
-   * [Exercise 5A] Seasons creates a seasons object
-   */
   constructor() {
-    // ✨ initialize whatever properties are needed
+    this.seasons = ['summer', 'fall', 'winter', 'spring'];
+    this.currentSeason = 0;
   }
-
-  /**
-   * [Exercise 5B] Seasons.prototype.next returns the next season
-   * @returns {string} - the next season starting with "summer"
-   *
-   * EXAMPLE
-   * const seasons = new Seasons()
-   * seasons.next() // returns "summer"
-   * seasons.next() // returns "fall"
-   * seasons.next() // returns "winter"
-   * seasons.next() // returns "spring"
-   * seasons.next() // returns "summer"
-   */
   next() {
-    // ✨ implement
+    const result = this.seasons[this.currentSeason];
+    if (this.currentSeason === 3) {
+      this.currentSeason = 0;
+    } else {
+      ++this.currentSeason;
+    }
+    return result;
   }
 }
 
