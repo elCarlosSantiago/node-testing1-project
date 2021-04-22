@@ -1,5 +1,4 @@
 function trimProperties(obj) {
-  // ✨ implement
   const result = {};
   for (let prop in obj) {
     result[prop] = obj[prop].trim();
@@ -78,30 +77,11 @@ class Car {
   }
 }
 
-/**
- * [Exercise 7] Asynchronously resolves whether a number is even
- * @param {number} number - the number to test for evenness
- * @returns {promise} - resolves true if number even, false otherwise
- *
- * EXAMPLE
- * isEvenNumberAsync(2).then(result => {
- *    // result is true
- * })
- * isEvenNumberAsync(3).then(result => {
- *    // result is false
- * })
- * isEvenNumberAsync('foo').catch(error => {
- *    // error.message is "number must be a number"
- * })
- * isEvenNumberAsync(NaN).catch(error => {
- *    // error.message is "number must be a number"
- * })
- */
 async function isEvenNumberAsync(number) {
   if (typeof number !== 'number' || isNaN(number)) {
-    throw new Error('number must be a number')
+    throw new Error('number must be a number');
   }
-  return number % 2 === 0 || false
+  return number % 2 === 0 || false;
 }
 
 module.exports = {
